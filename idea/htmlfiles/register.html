@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - POS</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: #f4f7fc;
+        }
+
+        .register-container {
+            max-width: 900px;
+            width: 100%;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin: auto;
+            display: flex;
+            height: 80vh;
+        }
+
+        .register-form {
+            flex: 1;
+            padding: 40px;
+        }
+
+        .register-form h1 {
+            font-size: 2.5em;
+            color: #ff7900;
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .register-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #ff7900;
+            border: none;
+            color: white;
+            font-size: 1.2em;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .register-btn:hover {
+            background-color: #e66800;
+        }
+
+        .login-link {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .login-link a {
+            color: #ff7900;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+
+        .register-image {
+            flex: 1;
+            background-color: #f4f7fc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .register-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        #sec{
+            position: relative;
+            top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="register-container">
+        <h1><span class="register-title">Register</span></h1>
+        <section id="sec">
+            <form>
+                <div class="input-group">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" id="username" class="form-control" placeholder="Enter Your Username">
+                </div>
+                <div class="input-group">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" id="password" class="form-control" placeholder="Enter Your Password">
+                </div>
+                <div class="input-group">
+                    <label for="confirm-password" class="form-label">Confirm Password</label>
+                    <input type="password" id="confirm-password" class="form-control" placeholder="Confirm Your Password">
+                </div>
+                <button type="submit" class="register-btn">Register</button>
+            </form>
+            <div class="login-link">
+                <p>Do you have an account? <a href="#">Login here</a></p>
+            </div>
+
+        </section>
+            
+        <div class="register-image">
+            <img src="/images/login.png" alt="Registration Illustration">
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

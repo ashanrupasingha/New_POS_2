@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>pos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="Css/DashBord.css">
+  <link rel="stylesheet" href="Css/FristPage.css">
+  <link rel="stylesheet" href="Css/LoginPage.css">
+  <link rel="stylesheet" href="Css/ManageCustomer.css">
+  <link rel="stylesheet" href="Css/ManageItem.css">
+  <link rel="stylesheet" href="Css/PlaceOrder.css">
+  <link rel="stylesheet"href="Css/RegisterPage.css">
+
+  <style>
+
+  </style>
+</head>
+<body style="display: block">
+<!--Login Page-->
+<section style="display: flex;justify-content: center;margin: 20px">
+  <div class="login-container d-flex flex-lg-row flex-column">
+    <!-- Login Form Section -->
+    <div class="login-form col-lg-6">
+      <h1>Login</h1>
+      <form>
+        <div class="mb-3">
+          <label for="username" class="form-label">Username</label>
+          <input type="text" class="form-control" id="username" placeholder="Enter Your Username">
+        </div>
+        <div class="mb-4">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" placeholder="Enter Your Password">
+        </div>
+        <button type="submit" class="btn login-btn w-100">Login</button>
+      </form>
+      <div class="register-link mt-3">
+        <p>Don't have an account? <a href="#">Register here</a></p>
+      </div>
+    </div>
+
+    <!-- Login Image Section -->
+    <div class="login-image col-lg-6">
+      <img src="/images/ui-ux-design-concept-with-people-scene-in-flat-cartoon-design-woman-designer-creates-user-interface-using-laptop-brainstorming-and-generating-new-ideas-illustration-visual-story-for-web-vector.jpg" alt="Login Illustration">
+    </div>
+  </div>
+
+</section>
+
+<section>
+  <!--Register Page-->
+
+  <div class="register-container">
+    <h1><span class="register-title">Register</span></h1>
+    <section id="sec">
+      <form>
+        <div class="input-group">
+          <label for="username" class="form-label">Username</label>
+          <input type="text" id="usernameregister" class="form-control" placeholder="Enter Your Username">
+        </div>
+        <div class="input-group">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" id="passwordregister" class="form-control" placeholder="Enter Your Password">
+        </div>
+        <div class="input-group">
+          <label for="confirm-password" class="form-label">Confirm Password</label>
+          <input type="password" id="confirm-password" class="form-control" placeholder="Confirm Your Password">
+        </div>
+        <button type="submit" class="register-btn">Register</button>
+      </form>
+      <div class="login-link">
+        <p>Do you have an account? <a href="#">Login here</a></p>
+      </div>
+
+    </section>
+
+    <div class="register-image">
+      <img src="/images/login.png" alt="Registration Illustration">
+    </div>
+  </div>
+
+</section>
+
+<section>
+
+
+  <!--Body Page-->
+  <div class="dashboard">
+    <h1><span class="highlight">D</span>ashboard</h1>
+    <div class="row align-items-center mt-4">
+
+      <div class="col-md-6 mb-4 mb-md-0">
+        <div class="image-container">
+          <img src="/images/dashboard.png" alt="Dashboard illustration" class="img-fluid">
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="d-flex flex-column align-items-center gap-3">
+          <button class="action-btn btn">Manage Customers</button>
+          <button class="action-btn btn">Manage Items</button>
+          <button class="action-btn btn">Place Orders</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<section>
+
+
+  <!--Frist Page-->
+  <div class="container-custom">
+    <div class="content">
+      <h1><span class="order">Order</span> <span class="pulse">Pulse</span></h1>
+      <p class="subtitle">Simplify, Optimize, Succeed</p>
+
+      <div class="image-section mb-4">
+        <img src="/images/firstPageImg.jpeg" alt="Order Management Illustration" class="img-fluid">
+      </div>
+
+      <p class="description">
+        Welcome to Order Pulse, where order management is effortless. Our intuitive platform streamlines your processes, enhancing efficiency and accuracy. Experience seamless control and insight, and watch your business thrive.
+      </p>
+
+      <div class="d-flex justify-content-center gap-3">
+        <a href="#" class="btn btn-custom">Login</a>
+        <a href="#" class="btn btn-custom">Register</a>
+      </div>
+    </div>
+  </div>
+
+
+</section>
+
+<section>
+  <!--ManageCustomer Page-->
+  <div class="container-custom">
+    <!-- *** Header Section *** -->
+    <header class="d-flex justify-content-between align-items-center border-bottom pb-2 mb-4">
+      <h1><span class="highlight">Order</span> Pulse</h1>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Customers</a>
+        <a href="#">Items</a>
+        <a href="#">Orders</a>
+        <a href="#">Others</a>
+      </nav>
+    </header>
+
+    <!-- *** Main Content *** -->
+    <main>
+      <h2>Manage Customer</h2>
+
+      <!-- *** Form Section *** -->
+      <div class="form-container">
+        <form>
+          <div class="row mb-3">
+            <div class="col-md-6 mb-3 mb-md-0">
+              <label for="customerId" class="form-label">Customer Id</label>
+              <input type="text" class="form-control" id="customerId" placeholder="Enter Customer Id">
+            </div>
+            <div class="col-md-6">
+              <label for="contactNo" class="form-label">Contact No.</label>
+              <input type="text" class="form-control" id="contactNo" placeholder="Enter Contact No.">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-6 mb-3 mb-md-0">
+              <label for="customerName" class="form-label">Customer Name</label>
+              <input type="text" class="form-control" id="customerName" placeholder="Enter Customer Name">
+            </div>
+            <div class="col-md-6">
+              <label for="nicNo" class="form-label">NIC No.</label>
+              <input type="text" class="form-control" id="nicNo" placeholder="Enter NIC No.">
+            </div>
+          </div>
+          <div class="mb-4">
+            <label for="address" class="form-label">Address</label>
+            <input type="text" class="form-control" id="address" placeholder="Enter Address">
+          </div>
+
+          <!-- *** Button Group *** -->
+          <div class="row button-group">
+            <div class="col-6 col-md-2 mb-2">
+              <button type="button" class="btn action-btn">Add</button>
+            </div>
+            <div class="col-6 col-md-2 mb-2">
+              <button type="button" class="btn action-btn">Update</button>
+            </div>
+            <div class="col-6 col-md-2 mb-2">
+              <button type="button" class="btn action-btn">Delete</button>
+            </div>
+            <div class="col-6 col-md-2 mb-2">
+              <button type="button" class="btn action-btn">Clear</button>
+            </div>
+            <div class="col-6 col-md-2 mb-2">
+              <button type="button" class="btn action-btn">Dashboard</button>
+            </div>
+            <div class="col-6 col-md-2 mb-2">
+              <button type="button" class="btn action-btn">Search</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!-- *** Table Section *** -->
+      <div class="table-responsive">
+        <table class="table-striped-customer">
+          <thead>
+          <tr>
+            <th>Customer Id</th>
+            <th>Customer Name</th>
+            <th>Address</th>
+            <th>Contact No.</th>
+            <th>NIC No.</th>
+          </tr>
+          </thead>
+          <tbody>
+          <!-- Add table rows dynamically as needed -->
+          <tr>
+
+          </tr>
+          <tr>
+
+          </tr>
+          <!-- More rows... -->
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+
+
+</section>
+
+<section>
+
+  <!--Manage Item Page-->
+  <div class="container-custom">
+    <!-- Header Section -->
+    <header class="d-flex justify-content-between align-items-center border-bottom pb-2 mb-4">
+      <h1><span class="highlight">Order</span> Pulse</h1>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Customers</a>
+        <a href="#">Items</a>
+        <a href="#">Orders</a>
+        <a href="#">Others</a>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <h2>Manage Items</h2>
+      <div class="form-container mb-4">
+        <form>
+          <div class="row mb-3">
+            <div class="col-md-6 mb-3 mb-md-0">
+              <label for="itemCode" class="form-label">Item Code</label>
+              <input type="text" class="form-control" id="itemCode" placeholder="Enter Item Code">
+            </div>
+            <div class="col-md-6">
+              <label for="unitPrice" class="form-label">Unit Price</label>
+              <input type="text" class="form-control" id="unitPrice" placeholder="Enter Unit Price">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-6 mb-3 mb-md-0">
+              <label for="itemName" class="form-label">Item Name</label>
+              <input type="text" class="form-control" id="itemName" placeholder="Enter Item Name">
+            </div>
+            <div class="col-md-6">
+              <label for="qtyOnHand" class="form-label">Qty On Hand</label>
+              <input type="text" class="form-control" id="qtyOnHand" placeholder="Enter Qty On Hand">
+            </div>
+          </div>
+          <div class="mb-4">
+            <label for="description" class="form-label">Description</label>
+            <input type="text" class="form-control" id="description" placeholder="Enter Description">
+          </div>
+
+          <!-- Button Group -->
+          <div class="row">
+            <div class="col-6 col-md-2 mb-2">
+              <button type="button" class="btn action-btn">Add</button>
+            </div>
+            <div class="col-6 col-md-2 mb-2">
+              <button type="button" class="btn action-btn">Update</button>
+            </div>
+            <div class="col-6 col-md-2 mb-2">
+              <button type="button" class="btn action-btn">Delete</button>
+            </div>
+            <div class="col-6 col-md-2 mb-2">
+              <button type="button" class="btn action-btn">Clear</button>
+            </div>
+            <div class="col-6 col-md-2 mb-2">
+              <button type="button" class="btn action-btn">Dashboard</button>
+            </div>
+            <div class="col-6 col-md-2 mb-2">
+              <button type="button" class="btn action-btn">Search</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!-- Table Section -->
+      <div class="table-responsive">
+        <table class="table-striped-item">
+          <thead>
+          <tr>
+            <th>Item Code</th>
+            <th>Item Name</th>
+            <th>Description</th>
+            <th>Unit Price</th>
+            <th>Qty On Hand</th>
+          </tr>
+          </thead>
+          <tbody>
+          <!-- Add table rows dynamically as needed -->
+          <tr>
+
+          </tr>
+          <tr>
+
+          </tr>
+          <!-- More rows as needed -->
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+
+
+</section>
+</section>
+
+<!--PlaceOrder-->
+<div class="container-custom">
+  <!-- Header Section -->
+  <header class="d-flex justify-content-between align-items-center border-bottom pb-2 mb-4">
+    <h1><span class="highlight">Order</span> Pulse</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Customers</a>
+      <a href="#">Items</a>
+      <a href="#">Orders</a>
+      <a href="#">Others</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <h2>Place Order</h2>
+    <div class="row mb-4">
+      <!-- Invoice Details -->
+      <div class="col-md-4">
+        <div class="invoice-details">
+          <h3>Invoice Details</h3>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Order Id">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Date">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Customer Id">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Customer Name">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Contact No.">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Address">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item Select -->
+      <div class="col-md-4">
+        <div class="item-select">
+          <h3>Item Select</h3>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Item Code">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Item Name">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Unit Price">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Qty On Hand">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Qty">
+          </div>
+          <button class="btn action-btn">Add Item</button>
+        </div>
+      </div>
+
+      <!-- Order Summary -->
+      <div class="col-md-4">
+        <div class="order-summary">
+          <h3>Order Summary</h3>
+          <p>Total:</p>
+          <p>Sub Total:</p>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Cash">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Discount">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Balance">
+          </div>
+          <button class="btn action-btn">Purchase</button>
+        </div>
+      </div>
+    </div>
+
+
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>Item Code</th>
+        <th>Item Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Total</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+
+      </tr>
+      <tr>
+
+      </tr>
+      </tbody>
+    </table>
+  </main>
+</div>
+
+<section>
+
+
+<!-- Bootstrap JS Bundle (includes Popper) -->
+</section>
+<!--PlaceOrder-->
+<div class="container-custom">
+  <!-- Header Section -->
+  <header class="d-flex justify-content-between align-items-center border-bottom pb-2 mb-4">
+    <h1><span class="highlight">Order</span> Pulse</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Customers</a>
+      <a href="#">Items</a>
+      <a href="#">Orders</a>
+      <a href="#">Others</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <h2>Place Order</h2>
+    <div class="row mb-4">
+      <!-- Invoice Details -->
+      <div class="col-md-4">
+        <div class="invoice-details">
+          <h3>Invoice Details</h3>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Order Id">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Date">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Customer Id">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Customer Name">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Contact No.">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Address">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item Select -->
+      <div class="col-md-4">
+        <div class="item-select">
+          <h3>Item Select</h3>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Item Code">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Item Name">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Unit Price">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Qty On Hand">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Qty">
+          </div>
+          <button class="btn action-btn">Add Item</button>
+        </div>
+      </div>
+
+      <!-- Order Summary -->
+      <div class="col-md-4">
+        <div class="order-summary">
+          <h3>Order Summary</h3>
+          <p>Total:</p>
+          <p>Sub Total:</p>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Cash">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Discount">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Balance">
+          </div>
+          <button class="btn action-btn">Purchase</button>
+        </div>
+      </div>
+    </div>
+
+
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>Item Code</th>
+        <th>Item Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Total</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+
+      </tr>
+      <tr>
+
+      </tr>
+      </tbody>
+    </table>
+  </main>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="../script/Customer.js"></script>
+<script src="../script/Item.js"></script>
+<script src="../script/PlaceOrder.js"></script>
+</body>
+</html>

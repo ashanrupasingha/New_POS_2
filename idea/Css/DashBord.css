@@ -1,0 +1,52 @@
+body {
+    background-color: #f4f4f4;
+}
+
+.dashboard {
+    text-align: center;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 50px auto;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #000;
+}
+
+.highlight {
+    color: #FF7F00;
+}
+
+.action-btn {
+    background-color: #FF7F00;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 200px;
+    transition: background-color 0.3s ease;
+}
+
+.action-btn:hover {
+    background-color: #e67000;
+    color: white;
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+
+@media (max-width: 768px) {
+    .action-btn {
+        width: 100%;
+    }
+}

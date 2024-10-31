@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Order - Order Pulse</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+
+        .container-custom {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
+            margin: 50px auto;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #000;
+        }
+
+        .highlight {
+            color: #FF7F00;
+        }
+
+        nav a {
+            margin-left: 15px;
+            text-decoration: none;
+            color: #00BFFF;
+            font-size: 1.1rem;
+        }
+
+        main h2 {
+            font-size: 2.2rem;
+            color: #000;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .invoice-details, .item-select, .order-summary {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        h3 {
+            background-color: #FF7F00;
+            color: white;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .action-btn {
+            background-color: #FF7F00;
+            color: white;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .action-btn:hover {
+            background-color: #e67000;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table th, table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        table th {
+            background-color: #FF7F00;
+            color: white;
+        }
+
+        table tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-custom">
+        <!-- Header Section -->
+        <header class="d-flex justify-content-between align-items-center border-bottom pb-2 mb-4">
+            <h1><span class="highlight">Order</span> Pulse</h1>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Customers</a>
+                <a href="#">Items</a>
+                <a href="#">Orders</a>
+                <a href="#">Others</a>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <h2>Place Order</h2>
+            <div class="row mb-4">
+                <!-- Invoice Details -->
+                <div class="col-md-4">
+                    <div class="invoice-details">
+                        <h3>Invoice Details</h3>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Order Id">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Date">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Customer Id">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Customer Name">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Contact No.">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Address">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item Select -->
+                <div class="col-md-4">
+                    <div class="item-select">
+                        <h3>Item Select</h3>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Item Code">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Item Name">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Unit Price">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Qty On Hand">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Qty">
+                        </div>
+                        <button class="btn action-btn">Add Item</button>
+                    </div>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="col-md-4">
+                    <div class="order-summary">
+                        <h3>Order Summary</h3>
+                        <p>Total:</p>
+                        <p>Sub Total:</p>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Cash">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Discount">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Balance">
+                        </div>
+                        <button class="btn action-btn">Purchase</button>
+                    </div>
+                </div>
+            </div>
+
+          
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Item Code</th>
+                        <th>Item Name</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>IT001</td>
+                        <td>Item One</td>
+                        <td>$100</td>
+                        <td>1</td>
+                        <td>$100</td>
+                    </tr>
+                    <tr>
+                        <td>IT002</td>
+                        <td>Item Two</td>
+                        <td>$150</td>
+                        <td>2</td>
+                        <td>$300</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+    </div>
+
+    <!-- Bootstrap JS Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
