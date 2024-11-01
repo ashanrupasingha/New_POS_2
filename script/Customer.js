@@ -45,6 +45,7 @@ $(document).ready(function() {
         let contactNo = $('#contactNo').val().trim();
         let nicNo = $('#nicNo').val().trim();
 
+        //validation part
         if (customerName.length === 0) {
             Swal.fire({
                 icon: "error",

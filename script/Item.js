@@ -50,7 +50,7 @@ $(document).ready(function() {
         let unitPrice = $('#unitPrice').val().trim();
         let qtyOnHand = $('#qtyOnHand').val().trim();
 
-        // Validation checks
+        // Validation part
         if (!validateItemCode(itemCode)) {
             Swal.fire({
                 icon: "error",
