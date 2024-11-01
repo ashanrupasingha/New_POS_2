@@ -1,6 +1,22 @@
 $(document).ready(function() {
     let itemArray = [];
 
+    // Validation functions
+    const validateItemCode = (itemCode) => {
+        const itemCodeRegex = /^I\d{3}$/i; // Item code starting with 'I' followed by 3 digits
+        return itemCodeRegex.test(itemCode);
+    };
+
+    const validateUnitPrice = (unitPrice) => {
+        const unitPriceRegex = /^\d+(\.\d{1,2})?$/; // Allows numbers with up to two decimal places
+        return unitPriceRegex.test(unitPrice);
+    };
+
+    const validateQtyOnHand = (qtyOnHand) => {
+        const qtyOnHandRegex = /^[1-9]\d*$/; // Positive integers only
+        return qtyOnHandRegex.test(qtyOnHand);
+    };
+
     // Function to clear form fields
     function clearForm() {
         $('#itemCode').val('');
@@ -15,46 +31,72 @@ $(document).ready(function() {
         $('.table-striped-item tbody').empty();
         itemArray.forEach(item => {
             $('.table-striped-item tbody').append(`
-                <tr>
-                    <td>${item.itemCode}</td>
-                    <td>${item.itemName}</td>
-                    <td>${item.description}</td>
-                    <td>${item.unitPrice}</td>
-                    <td>${item.qtyOnHand}</td>
-                </tr>
-            `);
+                        <tr>
+                            <td>${item.itemCode}</td>
+                            <td>${item.itemName}</td>
+                            <td>${item.description}</td>
+                            <td>${item.unitPrice}</td>
+                            <td>${item.qtyOnHand}</td>
+                        </tr>
+                    `);
         });
     }
 
     // Add Button Click
     $('.btn:contains("Add")').click(function() {
-        let itemCode = $('#itemCode').val();
-        let itemName = $('#itemName').val();
-        let description = $('#description').val();
-        let unitPrice = $('#unitPrice').val();
-        let qtyOnHand = $('#qtyOnHand').val();
+        let itemCode = $('#itemCode').val().trim();
+        let itemName = $('#itemName').val().trim();
+        let description = $('#description').val().trim();
+        let unitPrice = $('#unitPrice').val().trim();
+        let qtyOnHand = $('#qtyOnHand').val().trim();
 
-        if (itemCode && itemName && description && unitPrice && qtyOnHand) {
-            // Add item to the array
+        // Validation checks
+        if (!validateItemCode(itemCode)) {
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Invalid item code! Should start with 'I' followed by 3 digits.",
+            });
+        } else if (itemName.length === 0) {
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Please fill in the item name!",
+            });
+        } else if (!validateUnitPrice(unitPrice)) {
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Invalid unit price! Use a valid number, e.g., 25.99.",
+            });
+        } else if (!validateQtyOnHand(qtyOnHand)) {
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Invalid quantity! Enter a positive integer.",
+            });
+            }   else if (description.length === 0) {
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "Please fill in the Description!",
+                });
+        } else {
             itemArray.push({ itemCode, itemName, description, unitPrice, qtyOnHand });
-
-            // Update the table
             updateItemTable();
-
             clearForm();
         }
     });
 
     // Update Button Click
     $('.btn:contains("Update")').click(function() {
-        let itemCode = $('#itemCode').val();
-        let itemName = $('#itemName').val();
-        let description = $('#description').val();
-        let unitPrice = $('#unitPrice').val();
-        let qtyOnHand = $('#qtyOnHand').val();
+        let itemCode = $('#itemCode').val().trim();
+        let itemName = $('#itemName').val().trim();
+        let description = $('#description').val().trim();
+        let unitPrice = $('#unitPrice').val().trim();
+        let qtyOnHand = $('#qtyOnHand').val().trim();
 
         if (itemCode) {
-            // Find the item in the array and update details
             let item = itemArray.find(i => i.itemCode === itemCode);
             if (item) {
                 item.itemName = itemName;
@@ -62,9 +104,7 @@ $(document).ready(function() {
                 item.unitPrice = unitPrice;
                 item.qtyOnHand = qtyOnHand;
 
-                // Update the table
                 updateItemTable();
-
                 clearForm();
             }
         }
@@ -72,15 +112,11 @@ $(document).ready(function() {
 
     // Delete Button Click
     $('.btn:contains("Delete")').click(function() {
-        let itemCode = $('#itemCode').val();
+        let itemCode = $('#itemCode').val().trim();
 
         if (itemCode) {
-            // Remove the item from the array
             itemArray = itemArray.filter(i => i.itemCode !== itemCode);
-
-            // Update the table
             updateItemTable();
-
             clearForm();
         }
     });
@@ -92,8 +128,8 @@ $(document).ready(function() {
 
     // Search Button Click
     $('.btn:contains("Search")').click(function() {
-        let itemCode = $('#itemCode').val();
-        let itemName = $('#itemName').val();
+        let itemCode = $('#itemCode').val().trim();
+        let itemName = $('#itemName').val().trim();
 
         if (itemCode || itemName) {
             $('.table-striped-item tbody tr').each(function() {

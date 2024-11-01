@@ -559,9 +559,90 @@
     </table>
   </main>
 </div>
+<script>
+  let home_nav = document.getElementById("home_nav");
+  let customer_nav = document.getElementById("customer_nav");
+  let item_nav = document.getElementById("item_nav");
+  let order_nav = document.getElementById("order_nav");
+  let register_nav = document.getElementById("register_nav");
+  let login_nav = document.getElementById("login_nav");
+
+  let firstPage = document.getElementById("firstPage");
+  let registerPage = document.getElementById("registerPage");
+  let loginPage = document.getElementById("loginPage");
+  let dashboardPage = document.getElementById("dashboardPage");
+  let customerPage = document.getElementById("customerPage");
+  let itemPage = document.getElementById("itemPage");
+  let orderPage = document.getElementById("orderPage");
+
+  registerPage.style.display = "none";
+  loginPage.style.display = "none";
+  dashboardPage.style.display = "none";
+  customerPage.style.display = "none";
+  itemPage.style.display = "none";
+  orderPage.style.display = "none";
+
+  home_nav.addEventListener('click',function () {
+    firstPage.style.display = "block";
+    registerPage.style.display = "none";
+    loginPage.style.display = "none";
+    dashboardPage.style.display = "none";
+    customerPage.style.display = "none";
+    itemPage.style.display = "none";
+    orderPage.style.display = "none";
+  });
+  customer_nav.addEventListener('click',function () {
+    firstPage.style.display = "none";
+    registerPage.style.display = "none";
+    loginPage.style.display = "none";
+    dashboardPage.style.display = "none";
+    customerPage.style.display = "block";
+    itemPage.style.display = "none";
+    orderPage.style.display = "none";
+  });
+  item_nav.addEventListener('click',function () {
+    firstPage.style.display = "none";
+    registerPage.style.display = "none";
+    loginPage.style.display = "none";
+    dashboardPage.style.display = "none";
+    customerPage.style.display = "none";
+    itemPage.style.display = "block";
+    orderPage.style.display = "none";
+  });
+  order_nav.addEventListener('click',function () {
+    firstPage.style.display = "none";
+    registerPage.style.display = "none";
+    loginPage.style.display = "none";
+    dashboardPage.style.display = "none";
+    customerPage.style.display = "none";
+    itemPage.style.display = "none";
+    orderPage.style.display = "block";
+  });
+  register_nav.addEventListener('click',function () {
+    firstPage.style.display = "none";
+    registerPage.style.display = "block";
+    loginPage.style.display = "none";
+    dashboardPage.style.display = "none";
+    customerPage.style.display = "none";
+    itemPage.style.display = "none";
+    orderPage.style.display = "none";
+  });
+  login_nav.addEventListener('click',function () {
+    firstPage.style.display = "none";
+    registerPage.style.display = "none";
+    loginPage.style.display = "block";
+    dashboardPage.style.display = "none";
+    customerPage.style.display = "none";
+    itemPage.style.display = "none";
+    orderPage.style.display = "none";
+  });
+</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="../script/Customer.js"></script>
 <script src="../script/Item.js"></script>
 <script src="../script/PlaceOrder.js"></script>
+
 </body>
 </html>
